@@ -10,7 +10,7 @@ void init(){
     cin.sync_with_stdio(0);
 }
 
-vector<int> LIS(vector<int>&arr, int n){//
+vector<int> LIS(vector<int>&arr, int n){// O(n log n), memory O(n).
     vector<int>res(n);
     int l = 1, tail[n] = {0};
     int* ptr;
