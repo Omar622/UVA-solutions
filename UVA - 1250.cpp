@@ -4,6 +4,12 @@
 typedef long long ll;
 using namespace std;
 
+void init(){
+    cin.tie(0);
+    cout.tie(0);
+    cin.sync_with_stdio(0);
+}
+
 struct targ{
     int x, y, p;
 };
@@ -35,17 +41,19 @@ double dp(int idx, int last){
 
 int main(){
 //    o:
+    init();
+    
     int x, y, p;
-    arr[0] = {0, 0, 1000000000};
+    arr[0] = {0, 0, 1000000000};//must take
 
     while(cin >> n && n != 0){
-        memset(mem, -1, sizeof mem);
+        memset(mem, -1, sizeof mem);//nan
 
         for (int i = 1; i <= n; i++){
             cin >> x >> y >> p;
             arr[i] = {x, y, p};
         }
-        arr[n+1] = {100, 100, 1000000000};
+        arr[n+1] = {100, 100, 1000000000};//must take
 
         cout << fixed << setprecision(3) << dp(1, 0) << "\n";
     }
