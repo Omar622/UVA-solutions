@@ -10,7 +10,7 @@ vector<int>toplg;
 
 void explore(vector<vector<int>>& adj, int flags[], int u){
     int v;
-    flags[u] = true;//visited
+    flags[u] = 1;//visited
 
     for (int i = 0; i < (int)adj[u].size() && !isCycle; i++){
         v = adj[u][i];
@@ -57,7 +57,7 @@ int main(){
                 printf("%i\n", toplg[i]);
             }
         }
-
+        
         p = 0;
         toplg.clear();
     }
