@@ -24,7 +24,7 @@ int main(){
         wake.emplace(u);
 
         while(m--){
-            cin >> u >> v;
+            scanf(" %c%c", &u, &v);
             adj[u - 'A'].emplace_back(v);
             adj[v - 'A'].emplace_back(u);
         }
@@ -46,10 +46,11 @@ int main(){
                     }
                 }
             }
-            for (int i = 0; i < (int)willWake.size(); i++){
-                wake.emplace(willWake[i]);
+            
+            while(!willWake.empty()){//clear willWake
+                wake.emplace(willWake.back());
+                willWake.pop_back();
             }
-
             nYears++;
         }
 
