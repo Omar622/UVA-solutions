@@ -23,15 +23,15 @@ void explore(pair<double, double> star[], bool vis[], int n, int u, double d){
 }
 
 int DFS(pair<double, double> star[], int n, double d){
-    int SCC = 0;
+    int CC = 0;
     bool vis[n] = {false};
     for (int i = 0; i < n; i++){
         if(!vis[i]){
             explore(star, vis, n, i, d);
-            SCC++;
+            CC++;
         }
     }
-    return SCC;
+    return CC;
 }
 
 int main(){
