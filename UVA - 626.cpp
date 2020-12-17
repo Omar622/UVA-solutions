@@ -54,7 +54,7 @@ int main(){
                 for (set<int>::iterator it3 = adj[u2].begin(); it3 != adj[u2].end(); it3++){
                     u3 = *it3;
                     if(u2 == u3 || u1 == u3) continue;
-                    if(adj[u3].find(u1) != adj[u3].end()){
+                    if(adj[u3].find(u1) != adj[u3].end()){//then u1 -> u2 -> u3 -> u1
                         if(checkIdentical(res, u1, u2, u3)){//check identical
                             add(res, u1, u2, u3);
                         }
